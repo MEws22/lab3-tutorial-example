@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<simplexml:Document xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:simplexml="http://www.example.org/simplexml" name="HammerFactory.xml">
+  <root name="factory">
+    <elements name="HammerHandle">
+      <attributes name="material" value="WOOD"/>
+    </elements>
+    <elements name="HammerHead">
+      <attributes name="material" value="STEEL"/>
+    </elements>
+    <elements name="Hammer">
+      <elements name="Hammer Handle(HammerHandle)"/>
+      <elements name="Hammer Head(HammerHead)"/>
+    </elements>
+  </root>
+</simplexml:Document>

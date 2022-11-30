@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_GRIN0Ci0EeuXEdsFXgHy1A">
+  <imports href="../metamodel/tutorial.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_XrKbwCi0EeuXEdsFXgHy1A" name="changeWoodToGold">
+    <lhs xmi:id="_XrLp4Ci0EeuXEdsFXgHy1A" name="Lhs"/>
+    <rhs xmi:id="_XrLp4Si0EeuXEdsFXgHy1A" name="Rhs"/>
+    <multiRules xmi:id="_fL96wCi0EeuXEdsFXgHy1A">
+      <lhs xmi:id="_fL-h0Ci0EeuXEdsFXgHy1A" name="Lhs">
+        <nodes xmi:id="_fL8FkCi0EeuXEdsFXgHy1A">
+          <type href="../metamodel/tutorial.ecore#//BasicItemType"/>
+          <attributes xmi:id="_jnTdoCi0EeuXEdsFXgHy1A" value="&quot;WOOD&quot;">
+            <type href="../metamodel/tutorial.ecore#//BasicItemType/material"/>
+          </attributes>
+        </nodes>
+      </lhs>
+      <rhs xmi:id="_fL-h0Si0EeuXEdsFXgHy1A" name="Rhs">
+        <nodes xmi:id="_fL8soCi0EeuXEdsFXgHy1A">
+          <type href="../metamodel/tutorial.ecore#//BasicItemType"/>
+          <attributes xmi:id="_jnUEsCi0EeuXEdsFXgHy1A" value="&quot;GOLD&quot;">
+            <type href="../metamodel/tutorial.ecore#//BasicItemType/material"/>
+          </attributes>
+        </nodes>
+      </rhs>
+      <mappings xmi:id="_fL9TsCi0EeuXEdsFXgHy1A" origin="_fL8FkCi0EeuXEdsFXgHy1A" image="_fL8soCi0EeuXEdsFXgHy1A"/>
+    </multiRules>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_aauj4Ci1EeuXEdsFXgHy1A" name="cloneCylinderShapeItemTypes">
+    <parameters xmi:id="_69lLECi1EeuXEdsFXgHy1A" name="newLength" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </parameters>
+    <parameters xmi:id="_3ufY4Si1EeuXEdsFXgHy1A" name="name" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_3ufY4ii1EeuXEdsFXgHy1A" name="radius" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </parameters>
+    <lhs xmi:id="_aavyACi1EeuXEdsFXgHy1A" name="Lhs"/>
+    <rhs xmi:id="_aavyASi1EeuXEdsFXgHy1A" name="Rhs"/>
+    <multiRules xmi:id="_Jx6iECi2EeuXEdsFXgHy1A">
+      <parameters xmi:id="_Jx7wMCi2EeuXEdsFXgHy1A" name="newLength" kind="IN">
+        <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameters>
+      <parameters xmi:id="_Jx7wMSi2EeuXEdsFXgHy1A" name="name" kind="VAR">
+        <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameters>
+      <parameters xmi:id="_Jx7wMii2EeuXEdsFXgHy1A" name="radius" kind="VAR">
+        <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameters>
+      <lhs xmi:id="_Jx6iESi2EeuXEdsFXgHy1A" name="Lhs">
+        <nodes xmi:id="_Ev29cCi2EeuXEdsFXgHy1A" outgoing="_L0nZoCi2EeuXEdsFXgHy1A">
+          <type href="../metamodel/tutorial.ecore#//Factory"/>
+        </nodes>
+        <nodes xmi:id="_FclgkCi2EeuXEdsFXgHy1A" incoming="_L0nZoCi2EeuXEdsFXgHy1A" outgoing="_MEj6ICi2EeuXEdsFXgHy1A">
+          <type href="../metamodel/tutorial.ecore#//BasicItemType"/>
+          <attributes xmi:id="_des1wCi2EeuXEdsFXgHy1A" value="name">
+            <type href="../metamodel/tutorial.ecore#//ItemType/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_GTO0sCi2EeuXEdsFXgHy1A" incoming="_MEj6ICi2EeuXEdsFXgHy1A">
+          <type href="../metamodel/tutorial.ecore#//CylinderShape"/>
+          <attributes xmi:id="_h6j9ECi2EeuXEdsFXgHy1A" value="radius">
+            <type href="../metamodel/tutorial.ecore#//CylinderShape/radius"/>
+          </attributes>
+        </nodes>
+        <edges xmi:id="_L0nZoCi2EeuXEdsFXgHy1A" source="_Ev29cCi2EeuXEdsFXgHy1A" target="_FclgkCi2EeuXEdsFXgHy1A">
+          <type href="../metamodel/tutorial.ecore#//Factory/itemTypes"/>
+        </edges>
+        <edges xmi:id="_MEj6ICi2EeuXEdsFXgHy1A" source="_FclgkCi2EeuXEdsFXgHy1A" target="_GTO0sCi2EeuXEdsFXgHy1A">
+          <type href="../metamodel/tutorial.ecore#//BasicItemType/shape"/>
+        </edges>
+      </lhs>
+      <rhs xmi:id="_Jx6iEii2EeuXEdsFXgHy1A" name="Rhs">
+        <nodes xmi:id="_Ev29cSi2EeuXEdsFXgHy1A" outgoing="_L0nZoSi2EeuXEdsFXgHy1A _U8iAYCi2EeuXEdsFXgHy1A">
+          <type href="../metamodel/tutorial.ecore#//Factory"/>
+        </nodes>
+        <nodes xmi:id="_FclgkSi2EeuXEdsFXgHy1A" incoming="_L0nZoSi2EeuXEdsFXgHy1A" outgoing="_MEkhMCi2EeuXEdsFXgHy1A">
+          <type href="../metamodel/tutorial.ecore#//BasicItemType"/>
+          <attributes xmi:id="_detc0Ci2EeuXEdsFXgHy1A" value="name">
+            <type href="../metamodel/tutorial.ecore#//ItemType/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_GTO0sSi2EeuXEdsFXgHy1A" incoming="_MEkhMCi2EeuXEdsFXgHy1A">
+          <type href="../metamodel/tutorial.ecore#//CylinderShape"/>
+          <attributes xmi:id="_h6j9ESi2EeuXEdsFXgHy1A" value="radius">
+            <type href="../metamodel/tutorial.ecore#//CylinderShape/radius"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_S3JBMCi2EeuXEdsFXgHy1A" incoming="_U8iAYCi2EeuXEdsFXgHy1A" outgoing="_VNvsMCi2EeuXEdsFXgHy1A">
+          <type href="../metamodel/tutorial.ecore#//BasicItemType"/>
+          <attributes xmi:id="_fZfHcCi2EeuXEdsFXgHy1A" value="name + '#2'">
+            <type href="../metamodel/tutorial.ecore#//ItemType/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_T7c94Ci2EeuXEdsFXgHy1A" incoming="_VNvsMCi2EeuXEdsFXgHy1A">
+          <type href="../metamodel/tutorial.ecore#//CylinderShape"/>
+          <attributes xmi:id="_jqBIgCi2EeuXEdsFXgHy1A" value="radius">
+            <type href="../metamodel/tutorial.ecore#//CylinderShape/radius"/>
+          </attributes>
+          <attributes xmi:id="_oygFQCi2EeuXEdsFXgHy1A" value="newLength">
+            <type href="../metamodel/tutorial.ecore#//Shape/length"/>
+          </attributes>
+        </nodes>
+        <edges xmi:id="_L0nZoSi2EeuXEdsFXgHy1A" source="_Ev29cSi2EeuXEdsFXgHy1A" target="_FclgkSi2EeuXEdsFXgHy1A">
+          <type href="../metamodel/tutorial.ecore#//Factory/itemTypes"/>
+        </edges>
+        <edges xmi:id="_MEkhMCi2EeuXEdsFXgHy1A" source="_FclgkSi2EeuXEdsFXgHy1A" target="_GTO0sSi2EeuXEdsFXgHy1A">
+          <type href="../metamodel/tutorial.ecore#//BasicItemType/shape"/>
+        </edges>
+        <edges xmi:id="_U8iAYCi2EeuXEdsFXgHy1A" source="_Ev29cSi2EeuXEdsFXgHy1A" target="_S3JBMCi2EeuXEdsFXgHy1A">
+          <type href="../metamodel/tutorial.ecore#//Factory/itemTypes"/>
+        </edges>
+        <edges xmi:id="_VNvsMCi2EeuXEdsFXgHy1A" source="_S3JBMCi2EeuXEdsFXgHy1A" target="_T7c94Ci2EeuXEdsFXgHy1A">
+          <type href="../metamodel/tutorial.ecore#//BasicItemType/shape"/>
+        </edges>
+      </rhs>
+      <mappings xmi:id="_Ev29cii2EeuXEdsFXgHy1A" origin="_Ev29cCi2EeuXEdsFXgHy1A" image="_Ev29cSi2EeuXEdsFXgHy1A"/>
+      <mappings xmi:id="_Fclgkii2EeuXEdsFXgHy1A" origin="_FclgkCi2EeuXEdsFXgHy1A" image="_FclgkSi2EeuXEdsFXgHy1A"/>
+      <mappings xmi:id="_GTO0sii2EeuXEdsFXgHy1A" origin="_GTO0sCi2EeuXEdsFXgHy1A" image="_GTO0sSi2EeuXEdsFXgHy1A"/>
+    </multiRules>
+  </units>
+  <units xsi:type="henshin:SequentialUnit" xmi:id="_jDuIECi3EeuXEdsFXgHy1A" name="applyAll" subUnits="_XrKbwCi0EeuXEdsFXgHy1A _aauj4Ci1EeuXEdsFXgHy1A">
+    <parameters xmi:id="_mQHyoCi3EeuXEdsFXgHy1A" name="newLength" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </parameters>
+    <parameterMappings xmi:id="_wP8RwCi3EeuXEdsFXgHy1A" source="_mQHyoCi3EeuXEdsFXgHy1A" target="_69lLECi1EeuXEdsFXgHy1A"/>
+    <parameterMappings xmi:id="_wP8RwSi3EeuXEdsFXgHy1A" source="_69lLECi1EeuXEdsFXgHy1A" target="_mQHyoCi3EeuXEdsFXgHy1A"/>
+  </units>
+</henshin:Module>
